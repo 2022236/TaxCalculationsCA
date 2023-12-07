@@ -13,23 +13,22 @@ import java.sql.Statement;
  *
  * @author lizam
  */
-public class DatabaseSetup {
+public class DatabaseSetup extends Database {
     final static String dbBaseURL = "jdbc:mysql://localhost";
     final static String USER = "OOC2023";
     final static String PASSWORD = "ooc2023";
-    final static String dbName = "TaxCalculation";
     
-    public boolean setupDB()throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+    public static boolean setupDB()throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException{
     Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
     try(
          Connection conn = DriverManager.getConnection(dbBaseURL,USER,PASSWORD);
          Statement stmt = conn.createStatement();
             
             ){
-            stmt.execute("CREATE DATABASE IF NOT EXISTS " + dbName+ ";");
+            stmt.execute("CREATE DATABASE IF NOT EXISTS " + dbName + ";");
             stmt.execute("USE " + dbName + ";");
             String sql = 
-                    "CREATE TABLE IF NOT EXISTS " + dbName + " ("
+                "CREATE TABLE IF NOT EXISTS " + tableName + " ("
                 + "userName VARCHAR(255),"
                 + "role VARCHAR(20),"
                 + "email VARCHAR(100),"
