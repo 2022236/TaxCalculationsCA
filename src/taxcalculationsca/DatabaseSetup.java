@@ -2,18 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package taxcalculationsca;
+/*package taxcalculationsca;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+*/
 
 /**
  *
- * @author lizam
+ * author Lizandra 2022236 and Taciana 2022404
  */
-public class DatabaseSetup extends Database {
+/*public class DatabaseSetup extends Database {
     final static String dbBaseURL = "jdbc:mysql://localhost";
     final static String USER = "OOC2023";
     final static String PASSWORD = "ooc2023";
@@ -41,4 +42,4 @@ public class DatabaseSetup extends Database {
           return false;
       }   
    }
-}
+}*/

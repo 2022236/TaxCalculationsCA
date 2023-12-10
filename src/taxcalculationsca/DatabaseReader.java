@@ -12,7 +12,7 @@ public class DatabaseReader extends Database {
             Connection conn = DriverManager.getConnection(db_URL, USER, PASSWORD);
             Statement stmt = conn.createStatement();  
         ) {
-            String sql = String.format("SELECT * FROM %s WHERE userName='%s' AND password='%s';", tableName, userName, password);
+            String sql = String.format("SELECT * FROM %s WHERE UserName='%s' AND PassWord='%s';", tableName, userName, password);
             ResultSet results = stmt.executeQuery(sql);
 
             if (results.next()) {

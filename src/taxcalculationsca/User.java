@@ -3,46 +3,111 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package taxcalculationsca;
+import java.util.Date;
 
 /**
  *
- * @author lizam
+ * author Lizandra 2022236 and Taciana 2022404
  */
+
+
 public class User {
     private String userName;
+    private String firstName;
+    private String lastName;
     private String password;
-    private String role;
+    private String position;
+    private Date bithDate;
+    private String email;
+    
+    
+    private commonVariables.Type typeUser;
+    private commonVariables.MaritalStatus userMaritalStatus;
+    
 
-    public User(String userName, String password, String role) {
+    public User(String userName, String firstName,String lastName, String password, Date bithDate,String position,commonVariables.Type userType, String email,commonVariables.MaritalStatus userMaritalStatus) {
         this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.position = position;
+        this.bithDate  = bithDate;
+        this.email = email;
         this.password = password;
-        this.role = role;
+        this.typeUser = userType;
+        this.userMaritalStatus = userMaritalStatus;
     }
 
     public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+        return this.userName;
     }
 
     public String getPassword() {
         return password;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public Date getBithDate() {
+        return bithDate;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public commonVariables.Type getTypeUser() {
+        return typeUser;
+    }
+
+    public commonVariables.MaritalStatus getUserMaritalStatus() {
+        return userMaritalStatus;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setBithDate(Date bithDate) {
+        this.bithDate = bithDate;
     }
-    
-    
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTypeUser(commonVariables.Type typeUser) {
+        this.typeUser = typeUser;
+    }
+
+    public void setUserMaritalStatus(commonVariables.MaritalStatus userMaritalStatus) {
+        this.userMaritalStatus = userMaritalStatus;
+    }
+
     
 }
